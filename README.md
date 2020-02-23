@@ -11,6 +11,8 @@ $ vi config/database.yml(defaultのpasswordをpassword、defaultのhostをlocalh
 $ docker-compose build 
 $ docker-compose run api rails db:create
 $ docker-compose run web sh
-$ npm install -g create-nuxt-app 
-$ create-nuxt-app .
+$ npm install -g create-nuxt-app (コンテナの中で)
+$ create-nuxt-app . (コンテナの中で)
+$ exit
+$ docker-compose up
 ```
