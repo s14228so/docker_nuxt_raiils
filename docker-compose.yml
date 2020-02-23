@@ -7,20 +7,20 @@ services:
       MYSQL_DATABASE: root
     ports:
       - "3306:3306"
-  back:
-    build: ./backend
+  api:
+    build: ./api
     command: bundle exec rails s -p 5000 -b '0.0.0.0'
     volumes:
-      - ./backend/.:/hack/docker_rails
+      - ./api/.:/api
     ports:
       - "5000:5000"
     links:
       - db
-  front:
-    build: ./frontend
+  web:
+    build: ./web
     command: npm run dev 
     volumes:
-      - ./frontend/.:/hack/docker_nuxt
+      - ./web/.:/web
     ports:
       - "3000:3000"
       ##違うコンテナが立ち上がるからコンテナのディレクトリは分けなくていい

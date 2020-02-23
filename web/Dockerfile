@@ -1,6 +1,6 @@
 FROM node:10-alpine
 
-WORKDIR /front
+WORKDIR /web
 
 ENV HOST 0.0.0.0
 EXPOSE 3000

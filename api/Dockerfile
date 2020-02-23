@@ -4,7 +4,7 @@ RUN apt-get update -qq && \
     libpq-dev \        
     nodejs     
 
-WORKDIR /app
+WORKDIR /api
 
 ADD ./Gemfile .
 ADD ./Gemfile.lock .
