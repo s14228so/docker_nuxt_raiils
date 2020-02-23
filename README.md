@@ -10,5 +10,7 @@ $ docker-compose run api rails new . --force --database=mysql --api
 $ vi config/database.yml(defaultのpasswordをpassword、defaultのhostをlocalhostからdbに編集)
 $ docker-compose build 
 $ docker-compose run api rails db:create
-$ docker-compose run web npx create-nuxt-app .
+$ docker-compose run web sh
+$ npm install -g create-nuxt-app 
+$ create-nuxt-app .
 ```
