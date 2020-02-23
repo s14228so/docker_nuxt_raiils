@@ -21,6 +21,7 @@ services:
     command: npm run dev 
     volumes:
       - ./web/.:/web
+      - /web/node_modules
     ports:
       - "8080:8080"
       ##違うコンテナが立ち上がるからコンテナのディレクトリは分けなくていい
