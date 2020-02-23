@@ -9,4 +9,4 @@ RUN apk update \
   && rm -rf /var/cache/apk/*
 
 ENV HOST 0.0.0.0
-EXPOSE 3000
+EXPOSE 8080
