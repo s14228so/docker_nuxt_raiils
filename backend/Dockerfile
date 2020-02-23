@@ -1,16 +1,13 @@
 FROM ruby:2.5.3
 RUN apt-get update -qq && \
     apt-get install -y build-essential \ 
-                       libpq-dev \        
-                       nodejs           
-RUN mkdir /hack
-RUN mkdir /hack/docker_rails
+    libpq-dev \        
+    nodejs     
 
-ENV APP_ROOT /hack/docker_rails
-WORKDIR $APP_ROOT
+WORKDIR /app
 
-ADD ./Gemfile $APP_ROOT/Gemfile
-ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
+ADD ./Gemfile .
+ADD ./Gemfile.lock .
 
 
 RUN bundle install
