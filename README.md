@@ -6,9 +6,9 @@
 ```
 $ git clone https://github.com/s14228so/docker_nuxt_raiils
 $ cd docker_nuxt_raiils
-$ docker-compose run api bundle exec rails new . --force --database=mysql --skip-bundle
+$ docker-compose run api rails new . --force --database=mysql --api
 $ vi config/database.yml(defaultのpasswordをpassword、defaultのhostをlocalhostからdbに編集)
+$ docker-compose build 
 $ docker-compose run api rails db:create
-$ docker-compose build && docker-compose up -d
-$ docker exec -it web /bin/sh
+$ docker-compose run web npx create-nuxt-app .
 ```
